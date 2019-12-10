@@ -494,8 +494,9 @@ public class BluetoothLEClient extends Plugin {
     public void enable(PluginCall call) {
 
         if (!bluetoothAdapter.isEnabled()) {
-            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(call, enableIntent, REQUEST_ENABLE_BT);
+//             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+//             startActivityForResult(call, enableIntent, REQUEST_ENABLE_BT);
+            bluetoothAdapter.enable()
         }
     }
 
